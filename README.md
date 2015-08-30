@@ -1,2 +1,7 @@
 # FootySocial
-A social site for football lovers
+
+A social site for football lovers.
+
+# Contributors
+
+Oladipupo Isola
