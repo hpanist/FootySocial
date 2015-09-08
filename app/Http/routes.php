@@ -12,7 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+  return view('home');
+});
+Route::get('enter', function() {
+  return view('enter');
 });
 
 Route::get('users/register', 'Auth\AuthController@getRegister');
