@@ -18,9 +18,9 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Predict <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Action</a></li>
+              <li><a href="#">Today's Prediction</a></li>
               <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
+              <li><a href="#">Top Matches</a></li>
             </ul>
           </li>
         </ul>
