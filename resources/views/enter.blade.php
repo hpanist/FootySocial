@@ -12,9 +12,8 @@
     		background: #8999A8;
 			}
 			.navbar, .dropdown-menu{
-			background:rgba(255,255,255,0.25);
-			border: none;
-
+				background:rgba(255,255,255,0.25);
+				border: none;
 			}
 
 			.nav>li>a, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover, .dropdown-menu>li>a, .dropdown-menu>li{
@@ -61,7 +60,7 @@
 
   <body>
   <div class="navbar-wrapper">
-	<div class="container-fluid">
+		<div class="container-fluid">
 			<nav class="navbar navbar-fixed-top">
 				<div class="container">
 					<div class="navbar-header">
@@ -76,25 +75,18 @@
 
 					<div id="navbar" class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="#" class="">Home</a></li>
+							<li class="active"><a href="#" class="">Today</a></li>
 
-								<li class=" dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Departments <span class="caret"></span></a>
+								<li class=" dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Predict <span class="caret"></span></a>
 									<ul class="dropdown-menu">
 											<li><a href="#">View Departments</a></li>
 											<li><a href="#">Add New</a></li>
 									</ul>
 								</li>
-								<li class=" dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Managers <span class="caret"></span></a>
+								<li class=" dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hot Topics <span class="caret"></span></a>
 									<ul class="dropdown-menu">
 											<li><a href="#">View Managers</a></li>
 											<li><a href="#">Add New</a></li>
-									</ul>
-								</li>
-								<li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Staff <span class="caret"></span></a>
-									<ul class="dropdown-menu">
-											<li><a href="#">View Staff</a></li>
-											<li><a href="#">Add New</a></li>
-											<li><a href="#">Bulk Upload</a></li>
 									</ul>
 								</li>
 
@@ -111,12 +103,12 @@
 					</div>
 				</div>
 			</nav>
+		</div>
 	</div>
-</div>
 
-<div class="container">
-  <div class="content">
-  </div>
-</div>
+	<div class="container">
+	  <div class="content">
+	  </div>
+	</div>
   </body>
 </html>
