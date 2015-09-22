@@ -1,42 +1,58 @@
-<nav class="navbar navbar-fixed-top">
-	<div class="container">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">FootySocial</a>
-		</div>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid topmost-nav">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">FootySocial</a>
+    </div>
 
-		<div id="navbar" class="navbar-collapse collapse">
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="#" class="">Today</a></li>
-
-					<li class=" dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Predict <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-								<li><a href="#">View Departments</a></li>
-								<li><a href="#">Add New</a></li>
-						</ul>
-					</li>
-					<li class=" dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hot Topics <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-								<li><a href="#">View Managers</a></li>
-								<li><a href="#">Add New</a></li>
-						</ul>
-					</li>
-
-			</ul>
-			<ul class="nav navbar-nav pull-right">
-				<li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Signed in as  <span class="caret"></span></a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Change Password</a></li>
-						<li><a href="#">My Profile</a></li>
-					</ul>
-				</li>
-				<li class=""><a href="#">Logout</a></li>
-			</ul>
-		</div>
-	</div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Today <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">All</a></li>
+            <li><a href="#">For Hire</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Countries</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teams<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">All</a></li>
+            <li><a href="#">Now Hiring</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Meet Ups<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">All</a></li>
+            <li><a href="#">Host a Meetup</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-right" role="search">
+        <button type="button" class="btn auth-btn" onclick="auth_user()">Sign up</button>
+        <button type="button" class="btn auth-btn" style="margin-right:50px;" onclick="auth_user()">Sign in</button>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-info">Go</button>
+      </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
+
+<script>
+  function auth_user(){
+    window.location.href = "/auth";
+  }
+</script>
