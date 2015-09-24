@@ -11,12 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-  return view('home');
-});
-Route::get('enter', function() {
-  return view('enter');
-});
+Route::get('/', 'PagesController@home');
+Route::get('enter', 'PagesController@enter');
 
 Route::get('users/register', 'Auth\AuthController@getRegister');
 Route::post('users/register', 'Auth\AuthController@postRegister');
