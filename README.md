@@ -2,6 +2,6 @@
 
 A social site for football lovers created using the PHP framework - LARAVEL!
 
-# Contributors
+# Credit
 
 Oladipupo Isola
