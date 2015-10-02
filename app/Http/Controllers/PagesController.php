@@ -18,4 +18,9 @@ class PagesController extends Controller
   {
     return view('enter');
   }
+
+  public function profile()
+  {
+    return view('profile');
+  }
 }
