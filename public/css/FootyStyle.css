@@ -21,7 +21,15 @@
     box-shadow:none;
 }
 .navbar {
-    background-color: #4CA64C;
-    border: 0px solid gray;
-    border-radius: 0px;
+  background-color: #4CA64C;
+  border: 0px solid gray;
+  border-radius: 0px;
+}
+
+.center-signup {
+	color: black;
+	height: 50px;
+  width: 400px;
+  text-align: center;
+  margin: 20px 20px 20px 20px;
 }
