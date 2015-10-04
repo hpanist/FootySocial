@@ -2,39 +2,36 @@
 @section('title', 'Enter')
 
 @section('content')
-	<div class="container">
-	  <div class="content">
-	    <div class="title">Enter </div>
-	    <div class="center-signup">
-	    <form class="form-horizontal">
-			  <div class="form-group">
-			    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-			    <div class="col-sm-10">
-			      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-			    <div class="col-sm-10">
-			      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <div class="col-sm-offset-2 col-sm-10">
-			      <div class="checkbox">
-			        <label>
-			          <input type="checkbox"> Remember me
-			        </label>
-			      </div>
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <div class="col-sm-offset-2 col-sm-10">
-			      <button type="submit" class="btn btn-default">Sign in</button>
-			    </div>
-			  </div>
-			</form>
-			</div>
-	  </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h5 class="text-center">Signup on FootySocial</h5>
+          <form class="form form-signup" role="form">
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+              <input type="text" class="form-control" placeholder="Username" />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+              </span>
+              <input type="text" class="form-control" placeholder="Email Address" />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+              <input type="password" class="form-control" placeholder="Password" />
+            </div>
+          </div>
+        </div>
+        <a href="" class="btn btn-sm btn-success btn-block" role="button">Submit</a> </form>
+      </div>
+  	</div>
 	</div>
+</div>
 @endsection
