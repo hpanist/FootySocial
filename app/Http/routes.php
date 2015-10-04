@@ -13,6 +13,7 @@
 
 Route::get('/', 'PagesController@home');
 Route::get('enter', 'PagesController@enter');
+Route::get('join', 'PagesController@join');
 Route::get('profile', 'PagesController@profile');
 
 Route::get('users/register', 'Auth\AuthController@getRegister');

@@ -19,6 +19,11 @@ class PagesController extends Controller
     return view('enter');
   }
 
+  public function join()
+  {
+    return view('join');
+  }
+
   public function profile()
   {
     return view('profile');
