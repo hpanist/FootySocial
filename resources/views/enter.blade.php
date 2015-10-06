@@ -7,7 +7,7 @@
     <div class="col-md-4 col-md-offset-4">
       <div class="panel panel-default">
         <div class="panel-body">
-          <h5 class="text-center">Signup on FootySocial</h5>
+          <h5 class="text-center"><b>Enter!</b></h5>
           <form class="form form-signup" role="form">
           <div class="form-group">
             <div class="input-group">

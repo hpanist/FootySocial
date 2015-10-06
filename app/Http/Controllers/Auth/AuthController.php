@@ -22,6 +22,7 @@ class AuthController extends Controller
   */
 
   use AuthenticatesAndRegistersUsers, ThrottlesLogins;
+  private $redirectTo = '/';
 
   /**
    * Create a new authentication controller instance.
@@ -70,6 +71,7 @@ class AuthController extends Controller
 
   public function postRegister()
   {
+    return view('auth.register');
     echo "Hey";
   }
 }
