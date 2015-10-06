@@ -17,13 +17,6 @@
           </div>
           <div class="form-group">
             <div class="input-group">
-              <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
-              </span>
-              <input type="text" class="form-control" placeholder="Email Address" />
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="input-group">
               <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
               <input type="password" class="form-control" placeholder="Password" />
             </div>
