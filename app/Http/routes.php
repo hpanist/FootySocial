@@ -12,9 +12,8 @@
 */
 
 Route::get('/', 'PagesController@home');
-Route::get('enter', 'PagesController@enter');
-Route::get('join', 'PagesController@join');
 Route::get('profile', 'PagesController@profile');
 
-Route::get('auth/register', 'Auth\AuthController@getRegister');
-Route::post('auth/register', 'Auth\AuthController@postRegister');
+Route::get('/auth/join', 'Auth\AuthController@getRegister');
+Route::get('/auth/enter', 'Auth\AuthController@getEnter');
+Route::post('auth/join', 'Auth\AuthController@postRegister');

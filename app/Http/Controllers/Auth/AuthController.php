@@ -66,12 +66,29 @@ class AuthController extends Controller
 
   public function getRegister()
   {
-    echo "Hey";
+    return view('auth.join');
   }
 
-  public function postRegister()
+  public function postRegister(Request $request)
   {
-    return view('auth.register');
-    echo "Hey";
+    $validator = $this->validator($request->all());
+
+    if ($validator->fails())
+    {
+      $this->throwValidationException($request, $validator);
+    }
+
+    $this->auth->login($this->registrar->create($request->all()));
+    return redirect($this->redirectPath());
   }
+
+  public function getEnter()
+  {
+    return view('auth.enter');
+  }
+
+  // public function postRegister()
+  // {
+  //   echo "Hey";
+  // }
 }

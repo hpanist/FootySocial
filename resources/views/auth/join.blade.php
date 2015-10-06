@@ -8,7 +8,7 @@
 			<div class="panel panel-default">
 				<div class="panel-body">
 					<h5 class="text-center">Join the <b>FootySocial</b> fun!</h5>
-					<form method="POST" action="/auth/register" class="form form-signup" role="form">
+					<form method="POST" action="/auth/join" class="form form-signup" role="form">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 						<div class="form-group">
 							<div class="input-group">
@@ -36,7 +36,7 @@
 							</div>
 						</div>
 					</div>
-					<a href="" class="btn btn-sm btn-success btn-block" role="button">Submit</a>
+					<a href="" class="btn btn-sm btn-success btn-block" role="button">Join</a>
 				</form>
 			</div>
 		</div>
