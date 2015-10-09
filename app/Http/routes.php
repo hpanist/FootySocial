@@ -17,3 +17,8 @@ Route::get('profile', 'PagesController@profile');
 Route::get('/auth/join', 'Auth\AuthController@getRegister');
 Route::get('/auth/enter', 'Auth\AuthController@getEnter');
 Route::post('auth/join', 'Auth\AuthController@postRegister');
+
+Route::controllers([
+	"auth" 			=> 'Auth\AuthController',
+	"password"	=> 'Auth\PasswordController'
+]);
