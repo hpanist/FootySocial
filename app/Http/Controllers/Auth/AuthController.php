@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace FootySocial\Http\Controllers\Auth;
 
-use App\User;
 use Validator;
-use App\Http\Controllers\Controller;
+use FootySocial\User;
+use FootySocial\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace FootySocial\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
+use FootySocial\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class PasswordController extends Controller

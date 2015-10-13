@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace FootySocial\Events;
 
 abstract class Event
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace FootySocial\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
