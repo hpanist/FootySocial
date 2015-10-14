@@ -13,30 +13,30 @@
 						<div class="form-group">
 							<div class="input-group">
 								<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-								<input type="text" class="form-control" placeholder="Username" />
+								<input type="text" name="username" class="form-control" placeholder="Username" />
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="input-group">
 								<span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
 								</span>
-								<input type="text" class="form-control" placeholder="Email Address" />
+								<input type="email" name="email" class="form-control" placeholder="Email Address" />
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="input-group">
 								<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-								<input type="password" class="form-control" placeholder="Password" />
+								<input type="password" name="password" class="form-control" placeholder="Password" />
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="input-group">
 								<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-								<input type="password" class="form-control" placeholder="Confirm Password" />
+								<input type="password" name="password" class="form-control" placeholder="Confirm Password" />
 							</div>
 						</div>
 					</div>
-					<a href="" class="btn btn-sm btn-success btn-block" role="button">Join</a>
+					<a class="btn btn-sm btn-success btn-block" role="button">Join</a>
 				</form>
 			</div>
 		</div>

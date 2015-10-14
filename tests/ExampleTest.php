@@ -19,7 +19,7 @@ class ExampleTest extends TestCase
 
     public function testEnterPage()
     {
-        $this->visit('/enter')
+        $this->visit('/auth/enter')
              ->see('enter');
     }
 }

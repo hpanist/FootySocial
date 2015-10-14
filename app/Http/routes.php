@@ -15,8 +15,10 @@ Route::get('/', 'PagesController@home');
 Route::get('profile', 'PagesController@profile');
 
 Route::get('/auth/join', 'Auth\AuthController@getRegister');
-Route::get('/auth/enter', 'Auth\AuthController@getEnter');
-Route::post('auth/join', 'Auth\AuthController@postRegister');
+Route::post('/auth/join', 'Auth\AuthController@postRegister');
+
+Route::get('/auth/enter', 'Auth\AuthController@getLogin');
+Route::post('/auth/enter', 'Auth\AuthController@postLogin');
 
 Route::controllers([
 	"auth" 			=> 'Auth\AuthController',
