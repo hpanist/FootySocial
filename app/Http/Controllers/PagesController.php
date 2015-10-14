@@ -3,7 +3,6 @@
 namespace FootySocial\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use FootySocial\Http\Requests;
 use FootySocial\Http\Controllers\Controller;
 
