@@ -16,4 +16,10 @@ class ExampleTest extends TestCase
         $this->visit('/')
              ->see('Home');
     }
+
+    public function testEnterPage()
+    {
+        $this->visit('/enter')
+             ->see('enter');
+    }
 }
