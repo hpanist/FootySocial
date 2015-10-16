@@ -16,7 +16,7 @@
     },
     "autoload": {
         "classmap": [
-            "database"
+            ["app/"]
         ],
         "psr-4": {
             "FootySocial\\": "app/"

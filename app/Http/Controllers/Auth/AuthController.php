@@ -4,6 +4,7 @@ namespace FootySocial\Http\Controllers\Auth;
 
 use Validator;
 use FootySocial\User;
+use FootySocial\Http\Requests\Request;
 use FootySocial\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
@@ -43,7 +44,7 @@ class AuthController extends Controller
   protected function validator(array $data)
   {
     return Validator::make($data, [
-      'name' => 'required|max:255',
+      'username' => 'required|max:255',
       'email' => 'required|email|max:255|unique:users',
       'password' => 'required|confirmed|min:5',
     ]);
@@ -72,7 +73,7 @@ class AuthController extends Controller
   public function postRegister(Request $request)
   {
     var_dump($request);
-    
+
     $validator = $this->validator($request->all());
 
     if ($validator->fails())
@@ -82,10 +83,5 @@ class AuthController extends Controller
 
     $this->auth->login($this->registrar->create($request->all()));
     return redirect($this->redirectPath());
-  }
-
-  public function getEnter()
-  {
-    return view('auth.login');
   }
 }

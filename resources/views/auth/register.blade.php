@@ -8,6 +8,17 @@
 			<div class="panel panel-default">
 				<div class="panel-body">
 					<h5 class="text-center">Join the <b>FootySocial</b> fun!</h5>
+					@if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+          @endif
+
 					<form method="POST" action="/auth/join" class="form form-signup" role="form">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 						<div class="form-group">
@@ -36,7 +47,7 @@
 							</div>
 						</div>
 					</div>
-					<a class="btn btn-sm btn-success btn-block" role="button">Join</a>
+					<button class="btn btn-sm btn-success btn-block" role="button" type="submit">Join</button>
 				</form>
 			</div>
 		</div>

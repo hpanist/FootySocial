@@ -8,7 +8,7 @@
       <div class="panel panel-default">
         <div class="panel-body">
           <h5 class="text-center"><b>Enter!</b></h5>
-          <form class="form form-signup" role="form">
+          <form class="form form-signup" method="POST" action="/auth/enter" role="form">
           <div class="form-group">
             <div class="input-group">
               <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>

@@ -19,6 +19,7 @@ Route::post('/auth/join', 'Auth\AuthController@postRegister');
 
 Route::get('/auth/enter', 'Auth\AuthController@getLogin');
 Route::post('/auth/enter', 'Auth\AuthController@postLogin');
+Route::get('/auth/logout', 'Auth\AuthController@getLogout');
 
 Route::controllers([
 	"auth" 			=> 'Auth\AuthController',
