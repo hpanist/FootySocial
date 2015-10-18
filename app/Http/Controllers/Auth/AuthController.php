@@ -4,8 +4,8 @@ namespace FootySocial\Http\Controllers\Auth;
 
 use Validator;
 use FootySocial\User;
+use Illuminate\Support\Facades\Auth;
 use FootySocial\Http\Requests\Request;
-use FootySocial\Http\Requests\UserFormRequest;
 use FootySocial\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
@@ -25,7 +25,8 @@ class AuthController extends Controller
 
   use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
-  protected $redirectPath = '/';
+  protected $redirectPath = '/profile';
+  protected $registerPath = '/register';
   protected $loginPath = '/';
 
 
@@ -54,11 +55,6 @@ class AuthController extends Controller
     ]);
   }
 
-  public function authorize()
-  {
-      return true;
-  }
-
   /**
    * Create a new user instance after a valid registration.
    *
@@ -68,8 +64,8 @@ class AuthController extends Controller
   protected function create(array $data)
   {
     return User::create([
-      'username' => $data['username'],
       'email' => $data['email'],
+      'username' => $data['username'],
       'password' => bcrypt($data['password']),
     ]);
   }
@@ -79,17 +75,17 @@ class AuthController extends Controller
     return view('auth.register');
   }
 
-  public function postRegister(Request $request)
-  {
-    return Response::make('Registration successful!');
-    // $validator = $this->validator($request->all());
-    //
-    // if ($validator->fails())
-    // {
-    //   $this->throwValidationException($request, $validator);
-    // }
-    //
-    // $this->auth->login($this->registrar->create($request->all()));
-    // return redirect($this->redirectPath());
-  }
+  // public function postRegister(Request $request)
+  // {
+  //   return Response::make('Registration successful!');
+  //   $validator = $this->validator($request->all());
+  //
+  //   if ($validator->fails())
+  //   {
+  //     $this->throwValidationException($request, $validator);
+  //   }
+  //
+  //   $this->auth->login($this->registrar->create($request->all()));
+  //   return redirect($this->redirectPath());
+  // }
 }

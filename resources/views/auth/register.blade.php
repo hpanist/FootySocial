@@ -24,7 +24,7 @@
 						<div class="form-group">
 							<div class="input-group">
 								<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-								<input type="text" name="username" class="form-control" placeholder="Username" />
+								<input type="text" name="username" class="form-control" required="required" placeholder="Username" value="{{ old('name') }}"/>
 							</div>
 						</div>
 						<div class="form-group">
@@ -37,13 +37,13 @@
 						<div class="form-group">
 							<div class="input-group">
 								<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-								<input type="password" name="password" class="form-control" placeholder="Password" />
+								<input type="password" name="password" class="form-control" required="required" placeholder="Password" />
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="input-group">
 								<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-								<input type="password" name="password" class="form-control" placeholder="Confirm Password" />
+								<input type="password" name="password_confirmation" class="form-control" required="required" placeholder="Confirm Password" />
 							</div>
 						</div>
 					</div>

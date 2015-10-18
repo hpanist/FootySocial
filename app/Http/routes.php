@@ -12,8 +12,8 @@
 */
 
 // Signup route
-Route::get('/auth/register', 'Auth\AuthController@getRegister');
-Route::post('/auth/register', 'Auth\AuthController@postRegister');
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 //Login & Logout routes
 Route::get('/auth/login', 'Auth\AuthController@getLogin');
