@@ -19,7 +19,7 @@
             </div>
           @endif
 
-					<form method="POST" action="/auth/join" class="form form-signup" role="form">
+					<form method="POST" action="/auth/register" class="form form-signup" role="form">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 						<div class="form-group">
 							<div class="input-group">

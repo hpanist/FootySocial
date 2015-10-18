@@ -1,12 +1,14 @@
 <?php
 
-namespace FootySocial\Http\Requests;
+namespace App\Http\Requests;
+//file: app/Http/Requests/UserFormRequest.php
 
+use Response;
 use Illuminate\Foundation\Http\FormRequest;
 
-class Request extends FormRequest
+class UserFormRequest extends FormRequest
 {
-    //nothing was here before i pasted
+
     public function rules()
     {
         return [
@@ -20,4 +22,5 @@ class Request extends FormRequest
     {
         return true;
     }
+
 }

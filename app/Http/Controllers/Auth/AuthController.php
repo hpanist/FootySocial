@@ -5,6 +5,7 @@ namespace FootySocial\Http\Controllers\Auth;
 use Validator;
 use FootySocial\User;
 use FootySocial\Http\Requests\Request;
+use FootySocial\Http\Requests\UserFormRequest;
 use FootySocial\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
@@ -23,7 +24,10 @@ class AuthController extends Controller
   */
 
   use AuthenticatesAndRegistersUsers, ThrottlesLogins;
-  private $redirectTo = '/';
+
+  protected $redirectPath = '/';
+  protected $loginPath = '/';
+
 
   /**
    * Create a new authentication controller instance.
@@ -50,6 +54,11 @@ class AuthController extends Controller
     ]);
   }
 
+  public function authorize()
+  {
+      return true;
+  }
+
   /**
    * Create a new user instance after a valid registration.
    *
@@ -72,16 +81,15 @@ class AuthController extends Controller
 
   public function postRegister(Request $request)
   {
-    var_dump($request);
-
-    $validator = $this->validator($request->all());
-
-    if ($validator->fails())
-    {
-      $this->throwValidationException($request, $validator);
-    }
-
-    $this->auth->login($this->registrar->create($request->all()));
-    return redirect($this->redirectPath());
+    return Response::make('Registration successful!');
+    // $validator = $this->validator($request->all());
+    //
+    // if ($validator->fails())
+    // {
+    //   $this->throwValidationException($request, $validator);
+    // }
+    //
+    // $this->auth->login($this->registrar->create($request->all()));
+    // return redirect($this->redirectPath());
   }
 }
