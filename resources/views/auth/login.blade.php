@@ -8,12 +8,23 @@
       <div class="panel panel-default">
         <div class="panel-body">
           <h5 class="text-center"><b>Enter!</b></h5>
-            <form method="POST" action="auth/login" class="form form-signup" role="form">
+
+          	@if (count($errors) > 0)
+	            <div class="alert alert-danger">
+	                <strong>Whoops!</strong> There were some problems with your input.<br><br>
+	                <ul>
+	                    @foreach ($errors->all() as $error)
+	                        <li>{{ $error }}</li>
+	                    @endforeach
+	                </ul>
+	            </div>
+          	@endif
+            <form method="POST" action="/auth/login" class="form form-signup" role="form">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="form-group">
                   <div class="input-group">
                     <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                    <input type="text" class="form-control" name="username" placeholder="Username" />
+                    <input type="email" class="form-control" name="email" placeholder="Email" />
                   </div>
                 </div>
                 <div class="form-group">
