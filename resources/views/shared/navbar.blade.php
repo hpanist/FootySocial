@@ -22,6 +22,7 @@
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
+      @if (! Auth::check() )
       <ul class="nav navbar-nav navbar-right">
 				<li><a href="/auth/login">Enter</a></li>
 				<li><a href="/auth/register">Join</a></li>
@@ -36,6 +37,15 @@
           </ul>
         </li>
       </ul>
+      @endif
+
+      @if(Auth::check())
+      	<ul class="nav navbar-nav navbar-right">
+      		<li><a href="#"> @ {{ Auth::user()->username }}</a></li>
+      		<li><a href="/auth/logout">Logout</a></li>
+      	</ul>
+      @endif
+
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
