@@ -26,4 +26,6 @@ Route::controllers([
 ]);
 
 Route::get('/', 'PagesController@home');
-Route::get('profile', 'PagesController@profile');
+Route::get('profile', ['middleware' => 'auth', function() {
+		return view('profile');
+}]);
