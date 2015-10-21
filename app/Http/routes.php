@@ -29,3 +29,10 @@ Route::get('/', 'PagesController@home');
 Route::get('profile', ['middleware' => 'auth', function() {
 		return view('profile');
 }]);
+
+// To reset user's password
+Route::get('/password/email', 'Auth\PasswordController@getEmail');
+Route::post('/password/email', 'Auth\PasswordController@postEmail');
+
+Route::get('/password/reset', 'Auth\PasswordController@getReset');
+Route::post('/password/reset', 'Auth\PasswordController@postReset');

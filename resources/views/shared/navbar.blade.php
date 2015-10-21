@@ -41,7 +41,7 @@
 
       @if(Auth::check())
       	<ul class="nav navbar-nav navbar-right">
-      		<li><a class="garamondize" href="#"> Logged in as <span style="color: white">*{{ Auth::user()->username }}*<span></a></li>
+      		<li><a class="garamondize" href="/profile"> Logged in as <span style="color: white">*{{ Auth::user()->username }}*<span></a></li>
       		<li><a href="/auth/logout" class="garamondize">Logout</a></li>
       	</ul>
       @endif

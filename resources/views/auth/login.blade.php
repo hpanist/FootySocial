@@ -34,6 +34,9 @@
                   </div>
                 </div>
             	<button type="submit" class="btn btn-sm btn-success btn-block" role="button">Submit</button>
+              <div align="center" class="">
+		              <a class="garamondize" href="/password/email">Forgot your password?</a>
+		          </div>
           </form>
         </div>
       </div>

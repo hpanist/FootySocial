@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    'from' => ['address' => "donotreply@footysocial.com", 'name' => "FS Mailer"],
 
     /*
     |--------------------------------------------------------------------------

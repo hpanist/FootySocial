@@ -4,7 +4,7 @@
 @section('content')
 	<div class="container">
 	  <div class="content">
-	    <div class="title">Profile </div>
+	    <div class="title garamondize">Profile </div>
 	  </div>
 	</div>
 @endsection
