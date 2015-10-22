@@ -16,12 +16,12 @@
       <ul class="nav navbar-nav">
         <li class="active garamondize"><a href="#">Top Stories <span class="sr-only">(current)</span></a></li>
       </ul>
-      <form class="navbar-form navbar-left" role="search">
+      <!-- <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
-      </form>
+      </form> -->
       @if (! Auth::check() )
       <ul class="nav navbar-nav navbar-right">
 				<li><a href="/auth/login" class="garamondize">Enter</a></li>
@@ -37,9 +37,7 @@
           </ul>
         </li> -->
       </ul>
-      @endif
-
-      @if(Auth::check())
+      @else
       	<ul class="nav navbar-nav navbar-right">
       		<li><a class="garamondize" href="/profile"> Logged in as <span style="color: white">*{{ Auth::user()->username }}*<span></a></li>
       		<li><a href="/auth/logout" class="garamondize">Logout</a></li>
