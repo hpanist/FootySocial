@@ -23,7 +23,7 @@
 			<form method="POST" action="/password/email" class="form-inline" style="text-align: center">
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 				<div class="form-group">
-				  <label for="exampleInputEmail2">Email</label>
+				  <label class="garamondize" for="exampleInputEmail2">Email</label>
 				  <input type="email" name="email" class="form-control" id="exampleInputEmail3" placeholder="">
 				</div>
 				<button type="submit" class="btn btn-success">Reset </button>
