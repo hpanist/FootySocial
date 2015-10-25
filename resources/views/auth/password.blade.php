@@ -1,5 +1,5 @@
 @extends('layout.master')
-@section('title', 'Reset Password')
+@section('title', 'Enter e-mail')
 
 @section('content')
 <div class="container">
