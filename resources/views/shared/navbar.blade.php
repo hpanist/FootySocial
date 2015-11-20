@@ -24,7 +24,7 @@
       </form> -->
       @if (! Auth::check() )
       <ul class="nav navbar-nav navbar-right">
-				<li><a href="/auth/login" class="garamondize">Enter</a></li>
+				<li><a href="/login" class="garamondize">Enter</a></li>
 				<li><a href="/auth/register" class="garamondize">Join</a></li>
 				<!-- <li class="dropdown">
           <a href="#" class="dropdown-toggle garamondize" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>

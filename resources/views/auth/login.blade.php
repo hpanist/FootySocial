@@ -19,12 +19,11 @@
 									</ul>
 							</div>
 						@endif
-						<form method="POST" action="/auth/login" class="form form-signup" role="form">
-								<input type="hidden" name="_token" value="{{ csrf_token() }}">
+						<form action="/login" method="POST" class="form form-signup" role="form">
 								<div class="form-group">
 									<div class="input-group">
 										<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-										<input type="email" class="form-control" name="email" placeholder="Email" />
+										<input type="text" class="form-control" name="username" placeholder="username" />
 									</div>
 								</div>
 								<div class="form-group">
@@ -32,6 +31,7 @@
 										<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
 										<input type="password" class="form-control" name="password" placeholder="Password" />
 									</div>
+									<input type="hidden" name="_token" value="{{ csrf_token() }}">
 								</div>
 							<button type="submit" class="btn btn-sm btn-success btn-block" role="button">Submit</button>
 							<div align="center" class="">

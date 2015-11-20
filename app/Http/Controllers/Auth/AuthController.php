@@ -4,8 +4,8 @@ namespace FootySocial\Http\Controllers\Auth;
 
 use Validator;
 use FootySocial\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use FootySocial\Http\Requests\Request;
 use FootySocial\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
@@ -75,32 +75,44 @@ class AuthController extends Controller
 		return view('auth.register');
 	}
 
-	// public function postLogin(Request $request)
- //  {
- //      $this->validate($request, [
- //          'username' => 'required',
- //          'password' => 'required'
- //      ]);
+	public function postRegister(Request $request)
+	{
+	  // return Response::make('Registration successful!');
+		$this->validate($request, [
+			'email' => 'required|email|max:255|unique:users',
+			'username' => 'required|alpha_dash|max:18|unique:users',
+			'password' => 'required|confirmed|min:5',
+		]);
 
- //      $authStatus = Auth::attempt($request->only(['username', 'password']), $request->has('remember'));
- //      if (!$authStatus) {
- //          return redirect()->back()->with('info', 'Invalid Email or Password');
- //      }
+		User::create([
+			'email' => $request->input('email'),
+			'username' => $request->input('username'),
+			'password' => bcrypt($request->input('password'))
+		]);
 
- //      return redirect()->route('index')->with('info', 'You are now signed in');
- //  }
+		return redirect()
+	            ->route('index')
+	            ->withInfo('Your account has been created and you can now sign in');
+	}
 
-	// public function postRegister(Request $request)
-	// {
-	//   return Response::make('Registration successful!');
-	//   $validator = $this->validator($request->all());
-	//
-	//   if ($validator->fails())
-	//   {
-	//     $this->throwValidationException($request, $validator);
-	//   }
-	//
-	//   $this->auth->login($this->registrar->create($request->all()));
-	//   return redirect($this->redirectPath());
-	// }
+	public function getLogin()
+	{
+		return view('auth.login');
+	}
+
+	public function postLogin(Request $request)
+  {
+      $this->validate($request, [
+          'username' => 'required',
+          'password' => 'required'
+      ]);
+
+      $authStatus = Auth::attempt($request->only(['username', 'password']), $request->has('remember'));
+
+      if (!$authStatus) {
+          return redirect()->back()->with('info', 'Invalid Email or Password');
+      }
+
+      return redirect()->route('profile')->with('info', 'You are now signed in');
+  }
 }
